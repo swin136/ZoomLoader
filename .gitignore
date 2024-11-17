@@ -1,0 +1,5 @@
+*.venv
+input.txt
+data
+out
+__pycache__
