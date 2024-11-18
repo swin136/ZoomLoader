@@ -3,3 +3,4 @@ input.txt
 data
 out
 __pycache__
+*.bat
