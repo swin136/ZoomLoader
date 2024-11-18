@@ -48,13 +48,16 @@ class LoaderLinkParams:
             button = driver.find_element(By.CSS_SELECTOR,
                                          'button[class="zm-button--primary zm-button--large zm-button"]')
             button.send_keys(Keys.RETURN)
+            print('Проверка кода доступа ... ',end='')
             time.sleep(self.__timer_for_wait)
             try:
                 driver.find_element(By.CLASS_NAME, 'zm-alert__content')
-                print('Код доступа неверен!')
+                # print('Код доступа неверен!')
+                print("\033[31m{}\033[0m".format('Ошибка'))
                 return -1
             except exceptions.NoSuchElementException:
-                print('Код для Zoom-ссылки верный!')
+                # print('Код для Zoom-ссылки верный!')
+                print("\033[32m{}\033[0m".format('ОК'))
 
             is_continue = True
             print('Ищем ссылку на видео в Zoom ', end='')
