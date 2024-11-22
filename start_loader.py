@@ -1,5 +1,5 @@
 from core.loader_headers import LoaderLinkParams
-from core.settings import settings
+from core.settings import zoom_settings
 from core.tloader import LoaderMedia
 
 import datetime
@@ -10,7 +10,7 @@ def main() -> None:
     start_processing = datetime.datetime.now()
     print(f'Начало операции >>> {start_processing.strftime("%d-%m-%Y %H:%M:%S")}')
     ...
-    loader_headers = LoaderLinkParams(zoom_url=settings.meeting_params.meet_url, zoom_passwd=settings.meeting_params.meet_pwd)
+    loader_headers = LoaderLinkParams(zoom_url=zoom_settings.meeting_params.meet_url, zoom_passwd=zoom_settings.meeting_params.meet_pwd)
     if loader_headers.load_params() == 0:
         print(loader_headers)
         # print(loader_headers.get_headers)
