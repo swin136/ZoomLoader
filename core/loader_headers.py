@@ -5,14 +5,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common import exceptions
 
-from core.settings import settings
+from core.settings import zoom_settings
+from  core.settings import app_settings
 
 import time
 
 import os
 
-TIMER_FOR_WAIT = 20
-FIREFOX_DRIVER_NAME = 'geckodriver.exe'
+# TIMER_FOR_WAIT = 20
+# FIREFOX_DRIVER_NAME = 'geckodriver.exe'
+
+TIMER_FOR_WAIT = app_settings.delay_time
+FIREFOX_DRIVER_NAME = app_settings.driver_name
 
 # selenium.common.exceptions.NoSuchDriverException
 
@@ -138,7 +142,7 @@ if __name__ == "__main__":
     # ZOOM_URL = 'https://us06web.zoom.us/rec/share/oMwXJ3EU9N2tERUwhlsMGWspte8zV2UM5ZhCfkexiC9uZMtIJBJZabEoioBA_a6Q.v1NLFiDaRn1L6nNV'
     # INPUT_CODE = '1EGKQ+3m'
     # loader_headers = LoaderLinkParams(zoom_url=ZOOM_URL, zoom_passwd=INPUT_CODE)
-    loader_headers = LoaderLinkParams(zoom_url=settings.meeting_params.meet_url, zoom_passwd=settings.meeting_params.meet_pwd)
+    loader_headers = LoaderLinkParams(zoom_url=zoom_settings.meeting_params.meet_url, zoom_passwd=zoom_settings.meeting_params.meet_pwd)
     if loader_headers.load_params() == 0:
         print(loader_headers)
         print(loader_headers.get_headers)
