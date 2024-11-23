@@ -7,7 +7,7 @@
 
 ```git clone https://github.com/swin136/ZoomLoader.git```
 
-2. Переход в директорию Oxygen
+2. Переход в директорию ZoomLoader
 
 ```cd ZoomLoader```
 
@@ -23,11 +23,11 @@
 
 ```pip install -r requirements.txt```
 
-6. Скачайте последнюю версия geckodriver.exe нужной версии (32 или 64) с https://github.com/mozilla/geckodriver/releases, распакуйте и поместите его в каталог <b>core</b> проекта
+6. Скачайте последнюю версия geckodriver.exe нужной (32 или 64) версии с https://github.com/mozilla/geckodriver/releases, распакуйте и поместите его в каталог <b>core</b> проекта
 
 7. Скопируйте в корень проекта из каталога <b>core</b> файл <b>input.txt.example</b>, переименуйте его в <b>input.txt</b> и поместите туда актуальные данные (логин/пароль) для доступа к видео Zoom
 
-8. Запуск скрипта для демонстрации возможностей Oxygen
+8. Запуск скрипта для демонстрации возможностей ZoomLoader
 
 ```python start_loader.py```
 
