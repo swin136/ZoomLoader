@@ -6,13 +6,17 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common import exceptions
 
 from core.settings import zoom_settings
+from  core.settings import app_settings
 
 import time
 
 import os
 
-TIMER_FOR_WAIT = 20
-FIREFOX_DRIVER_NAME = 'geckodriver.exe'
+# TIMER_FOR_WAIT = 20
+# FIREFOX_DRIVER_NAME = 'geckodriver.exe'
+
+TIMER_FOR_WAIT = app_settings.delay_time
+FIREFOX_DRIVER_NAME = app_settings.driver_name
 
 # selenium.common.exceptions.NoSuchDriverException
 

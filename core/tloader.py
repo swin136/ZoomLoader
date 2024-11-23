@@ -6,12 +6,20 @@ import math
 import random
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
+from core.settings import app_settings
 
-BUFFER_SIZE = 20_485_760
-POOL_LENGTH = 8
-OUT_FILE = 'all_parts'
-DATA_DIR = 'data'
-OUT_DIR = 'out'
+# BUFFER_SIZE = 20_485_760
+# POOL_LENGTH = 8
+# OUT_FILE = 'all_parts'
+# DATA_DIR = 'data'
+# OUT_DIR = 'out'
+
+BUFFER_SIZE = app_settings.buffer_size
+POOL_LENGTH = app_settings.pool_length
+OUT_FILE = app_settings.out_file_name
+DATA_DIR = app_settings.tmp_data_dir
+OUT_DIR = app_settings.out_data_dir
+
 
 def folders_init(data_dir: str, out_dir: str) -> bool:
     try:
