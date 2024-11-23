@@ -13,11 +13,11 @@
 
 3. Создание виртуального окружения
 
-```python -m venv venv```
+```python -m venv .venv```
 
 4. Активация виртуального окружения
 
-```source venv/bin/activate```
+```.venv\Scripts\activate```
 
 5. Установка зависимостей
 
