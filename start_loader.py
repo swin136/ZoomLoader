@@ -44,7 +44,13 @@ def main() -> None:
         print("\033[34m{}\033[0m".format(f'{my_media.get_out_file_name}'))
         print(f'Файл находится в каталоге ', end='')
         print("\033[32m{}\033[0m".format(f'{my_media.get_output_folder}'))
-        
+        print('Удаляем временные файлы ... ', end='')
+        if my_media.delete_tmp_files() == True:
+            print("\033[32m{}\033[0m".format('ОК'))
+        else:
+            print("\033[31m{}\033[0m".format('Ошибка'))
+
+
     ...
     finish_processing = datetime.datetime.now()
     print(f'Завершение работы программы  >>> {finish_processing.strftime("%d-%m-%Y %H:%M:%S")}')
